@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gargee Seva Foundation</title>
+		<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Election Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- //for-mobile-apps -->
+		<link href="lib/css/blueimp-gallery.min.css" rel="stylesheet">
+		<link href="lib/css/animate.css" rel="stylesheet">
+		<link href="lib/css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="lib/css/style.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/font-awesome.min.css">
+		<link rel="stylesheet" href="lib/css/flexslider.css" type="text/css" media="screen" />
+		<style type="text/css">
+			.language-block {
+				position: fixed; 
+				right: 0px; 
+				top: 60px; 
+				z-index: 111;
+			}
+			.lang-list {
+				
+				width: 0;
+				overflow: hidden;
+    			transition: 0.5s;
+			}
+			.language-block:hover .lang-list{
+				
+				width: 100px;
+				padding: 10px 15px; 
+				font-size: 14px;
+				background-color: #fff; 
+				box-shadow: -3px 2px 5px rgba(117, 105, 105, 0.6);
+			}
+
+			.language-block .lang-list li{
+				padding: 5px 0px;
+			}
+			/*.language-block .lang-list li:hover{
+				background-color: #ccc;
+			}*/
+			/*.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+				border-bottom: 1px solid #fff;
+			}*/
+
+			.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    border-bottom: 1px solid #fff;
+    background: none;
+    color: #fff;
+}
+			
+		</style>
+	</head>
+	<body ng-app="myApp">
+		<!-- header -->
+		<div class="header_bg" ng-controller="appCtrl" >
+			<span class="language-block">
+				<span  style="padding: 5px 15px; background-color: #111; color: #fff; font-size: 24px;float: left;">
+					<i class="fa fa-language" aria-hidden="true"></i>
+				</span>
+				<ul class="list-unstyled lang-list" style="float: left; ">
+					<li><a href="" ng-click="languageChange('english')">English</a></li>
+					<li><a href="" ng-click="languageChange('hindi')">Hindi</a></li>
+					<li><a href="" ng-click="languageChange('marathi')">Marathi</a></li>
+				</ul>
+			</span>
+			<div class="container">
+				<!--start-header-->
+				<div class="header">
+					<div class="logo">
+						<a href="index.html"><img src="lib/images/gargee logo.png" alt=" " /></a>
+					</div>
+					<nav class="navbar navbar-default">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li ng-class="{ active: activeUrl == '/home' }"><a href="#/home" >Home</a></li>
+								<li ng-class="{ active: activeUrl == '/about' }"><a href="#/about">About Us</a></li>
+								<li ng-class="{ active: activeUrl == '/service' }">
+									<a href="#/service">Services</a>
+									<!--<ul class="dropdown-menu multi-column columns-3">
+										<div class="row">
+											<div class="party">
+												<ul class="multi-column-dropdown">
+													<li><a ui-sref="about">Current Elections</a></li>
+													<li class="divider"></li>
+													<li><a ui-sref="about">Past Elections</a></li>
+													<li class="divider"></li>
+													<li><a ui-sref="about">Future Elections</a></li>
+												</ul>
+											</div>
+										</div>
+									</ul>-->
+								</li>
+								<li ng-class="{ active: activeUrl == '/event' }"><a href="#/event">Events</a></li>
+								<li ng-class="{ active: activeUrl == '/gallery' }"><a href="#/gallery">Gallery</a></li>
+								<li ng-class="{ active: activeUrl == '/contact' }"><a href="#/contact">Contact Us</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->	
+						
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="header_bottom">
+		</div>
+		<!-- //end-header -->
+
+
+		<section ng-view></section>
+
+		<!-- footer -->
+		<div class="footer" >
+			<div class="container">
+				<!-- <h3>Sign up for our newsletter</h3>
+				<p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus 
+					tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+				<div class="footer-contact">
+					<form>
+						<input type="text" placeholder="Enter your email to update" required=" ">
+						<input type="submit" value="">
+					</form>
+				</div> -->
+				<div class="footer-grids">
+					<div class="col-xs-12 col-sm-12 col-md-3 footer-grid">
+						<div class="col-md-12 footer-heading">
+							<h3>Contact Us</h3>
+							<hr class="underline-hr">
+						</div>
+						<div class="colxs-12 col-md-12 padding">
+							<p>8/177 P.M.C Colony Pandav Nagar, Pune - 411016.
+							<a href="mailto:info@example.com">vgawde@gargee.org.in</a>
+							<a href="mailto:info@example.com">DonationIntegratehelp@gmail.com</a>
+							<p>Phone : +91 8668500425</p>
+							<p style="padding-left: 52px;"> +91 9371830344</p>
+						</div>
+						
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-3 footer-grid">
+						<div class="col-xs-12 col-sm-12 col-md-12 footer-heading">
+							<h3>Services</h3>
+							<hr class="underline-hr">
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 padding">
+							<ul class="padding">
+								<li><a ui-sref="contact" class="list-style-type">Contact</a></li>
+								<li><a ui-sref="about" class="list-style-type">About</a></li>
+								<li><a href="#" class="list-style-type">Privacy</a></li>
+								<li><a href="#" class="list-style-type">Terms</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="col-md-2 footer-grid">
+						<ul>
+							<li><a href="#">Download</a></li>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Documents</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2 footer-grid">
+						<ul>
+							<li><a href="#">Venenatis</a></li>
+							<li><a href="#">Extras</a></li>
+							<li><a href="#">Forums</a></li>
+						</ul>
+					</div> -->
+					<div class="col-xs-12 col-sm-12 col-md-3 footer-grid">
+						<div class="col-xs-12 col-sm-12 col-md-12 footer-heading">
+							<h3>Social Media</h3>
+							<hr class="underline-hr">
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 padding">
+						<div class="col-xs-6 col-sm-6 col-md-6 padding">
+							<ul class="padding">
+								<li class="list-style-type">
+								<a href="#">
+									<i class="fa fa-facebook facebook-icon"></i>
+									<span class="facebook-icon-text">Like Us</span>
+								</a>
+								</li>
+								<li class="list-style-type">
+								<a href="#">
+									<i class="fa fa-google-plus google-icon"></i>
+									<span class="facebook-icon-text">Plus1 Us</span>
+								</a>
+								</li>
+								<!--<li class="list-style-type">
+								<a href="#">
+									<i class=" fa fa-youtube youtube-icon"></i>
+									<span class="facebook-icon-text">Follow Us</span>
+								</a>
+								</li>-->
+							</ul>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6 padding">
+							<ul class="padding">
+								<!--<li class="list-style-type">
+									<a href="#">
+										<i class="fa fa-linkedin linkedin-icon"></i>
+										<span class="facebook-icon-text">Follow Us</span>
+									</a>
+								</li>-->
+								<li class="list-style-type">
+									<a href="#">
+										<i class="fa fa-twitter twitter-icon"></i>
+										<span class="facebook-icon-text">Follow Us</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<!-- <div class="col-md-12 footer-heading">
+							<h3>Facebook Page</h3>
+						</div> -->
+						<div class="col-xs-12 col-sm-12 col-md-12 padding">
+							<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgargeeseva%2F&tabs=timeline&width=270&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="270" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+							<!-- <a class="twitter-timeline" href="https://twitter.com/TwitterDev">Tweets by TwitterDev</a> --> 
+							<!-- <a class="twitter-timeline" href="https://twitter.com/TwitterDev">Tweets by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+						</div>
+						<!-- <div class="footer-grid-left">
+							<a href="#"><img src="images/1.jpg" alt=" " class="img-responsve" /></a>
+						</div>
+						<div class="footer-grid-left">
+							<a href="#"><img src="images/2.jpg" alt=" " class="img-responsve" /></a>
+						</div>
+						<div class="footer-grid-left">
+							<a href="#"><img src="images/3.jpg" alt=" " class="img-responsve" /></a>
+						</div>
+						<div class="footer-grid-left">
+							<a href="#"><img src="images/4.jpg" alt=" " class="img-responsve" /></a>
+						</div>
+						<div class="footer-grid-left">
+							<a href="#"><img src="images/5.jpg" alt=" " class="img-responsve" /></a>
+						</div>
+						<div class="footer-grid-left">
+							<a href="#"><img src="images/p1.jpg" alt=" " class="img-responsve" /></a>
+						</div> -->
+						<div class="clearfix"> </div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="footer-copy">
+					<p>&copy 2017 Gargee Seva Foundation. All rights reserved | Design by <a href="http://w3layouts.com">Imuons.</a></p>
+				</div>
+			</div>
+		</div>
+		<!-- //footer -->
+		<script type="text/javascript" src="lib/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="lib/js/angular.min.js"></script>
+		<script type="text/javascript" src="lib/js/angular-route.min.js"></script>
+		<!-- <script type="text/javascript" src="lib/js/angular-ui-router.min.js"></script> -->
+		
+		<!-- scroll_top_btn -->
+		<script type="text/javascript" src="lib/js/move-top.js"></script>
+		<script type="text/javascript" src="lib/js/easing.js"></script>
+	    <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+		<!--end scroll_top_btn -->
+
+		<!-- for bootstrap working -->
+	 	<script type="text/javascript" src="lib/js/bootstrap-3.1.1.min.js"></script>
+		<!-- //for bootstrap working -->
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="scripts/app.homeController.js"></script>
+		<script src="lib/js/jquery.blueimp-gallery.min.js"></script>
+
+	</body>
+</html>
